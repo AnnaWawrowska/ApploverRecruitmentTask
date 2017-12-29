@@ -7,55 +7,9 @@
 /* -- Helpers -- */
 /*
  * ----------------------------------------
- * FONTS
- *
- * Design has just one font loaded by @font-face
- * - Omnes (weight: 400, 500, 700)
- */
-@font-face {
-  font-family: 'Omnes';
-  src: url("../fonts/Omnes/omnes-regular-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Omnes/omnes-regular-webfont.woff") format("woff"), url("../fonts/Omnes/omnes-regular-webfont.ttf") format("truetype"), url("../fonts/Omnes/omnes-regular-webfont.svg#svgOmnes") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Omnes';
-  src: url("../fonts/Omnes/omnes-medium-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Omnes/omnes-medium-webfont.woff") format("woff"), url("../fonts/Omnes/omnes-medium-webfont.ttf") format("truetype"), url("../fonts/Omnes/omnes-medium-webfont.svg#svgOmnes") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Omnes';
-  src: url("../fonts/Omnes/omnes-bold-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/Omnes/omnes-bold-webfont.woff") format("woff"), url("../fonts/Omnes/omnes-bold-webfont.ttf") format("truetype"), url("../fonts/Omnes/omnes-bold-webfont.svg#svgOmnes") format("svg");
-  /* Legacy iOS */
-  font-style: normal;
-  font-weight: 700;
-}
-
-/*
- * ----------------------------------------
  * COLORS
  *
- * Colors in variables.
- * We have 7 recurrent colors:
- * - regular blue
- * - dark blue
- * - navy blue
- * - orange
- * - grey
- * - black
- * - white
- */
+*/
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -95,6 +49,11 @@ fieldset {
   margin: 0 auto;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -107,7 +66,7 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 p {
