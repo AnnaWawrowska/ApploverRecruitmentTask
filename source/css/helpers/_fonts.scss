@@ -1,0 +1,38 @@
+/*
+ * ----------------------------------------
+ * FONTS
+ *
+ * Design has just one font loaded by @font-face
+ * - Omnes (weight: 400, 500, 700)
+ */
+
+@font-face {
+	font-family: 'Omnes';
+	src: url('../fonts/Omnes/omnes-regular-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Omnes/omnes-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../fonts/Omnes/omnes-regular-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/Omnes/omnes-regular-webfont.svg#svgOmnes') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: 400; }
+
+@font-face {
+	font-family: 'Omnes';
+	src: url('../fonts/Omnes/omnes-medium-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Omnes/omnes-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../fonts/Omnes/omnes-medium-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/Omnes/omnes-medium-webfont.svg#svgOmnes') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: 500; }
+
+@font-face {
+	font-family: 'Omnes';
+	src: url('../fonts/Omnes/omnes-bold-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/Omnes/omnes-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('../fonts/Omnes/omnes-bold-webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/Omnes/omnes-bold-webfont.svg#svgOmnes') format('svg'); /* Legacy iOS */
+	font-style: normal;
+	font-weight: 700; }
+
+// The variables
+
+$font--main: 'Omnes', sans-serif;
