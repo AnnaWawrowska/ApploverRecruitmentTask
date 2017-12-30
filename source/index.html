@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css" />
 	<title>Applover - Recruitment Task - Anna Wawrowska</title>
 </head>
@@ -16,10 +16,10 @@
 				<div class="col">
 					<ul class="nav justify-content-end">
 						<li class="nav-item">
-							<a href="" class="nav-link">załóż konto</a>
+							<button class="nav-link" data-toggle="modal" data-target="#signUpModal">załóż konto</button>
 						</li>
 						<li class="nav-item">
-							<a href="" class="nav-link nav-link--green">zaloguj</a>
+							<button type="button" class="nav-link nav-link--green" data-toggle="modal" data-target="#loginModal">zaloguj</button>
 						</li>
 					</ul>
 				</div>
@@ -31,7 +31,7 @@
 			<div class="container">
 				<form action="/" method="get" class="search">
 					<input class="search__input" type="text" name="search" placeholder="Wpisz szukaną frazę np. informatyka, Warszawa, java">
-					<button class="btn btn-primary search__submit" type="submite">Szukaj</button>
+					<button class="btn btn-primary search__submit" type="submit">Szukaj</button>
 				</form>
 			</div>
 		</section>
@@ -55,7 +55,7 @@
 									<span class="offer__average">Średnia ocena: 4</span>
 								</div>
 							</header>
-							<h2 class="offer__profession">PROGRAMISTA</h2>
+							<h2 class="offer__profession">Programista</h2>
 							<ul class="offer__list">
 								<li class="offer__info">
 									<h4>Branża:</h4>
@@ -106,7 +106,7 @@
 									<span class="offer__average">Średnia ocena: 4</span>
 								</div>
 							</header>
-							<h2 class="offer__profession">PROGRAMISTA</h2>
+							<h2 class="offer__profession">Programista</h2>
 							<ul class="offer__list">
 								<li class="offer__info">
 									<h4>Branża:</h4>
@@ -157,7 +157,7 @@
 									<span class="offer__average">Średnia ocena: 4</span>
 								</div>
 							</header>
-							<h2 class="offer__profession">PROGRAMISTA</h2>
+							<h2 class="offer__profession">Programista</h2>
 							<ul class="offer__list">
 								<li class="offer__info">
 									<h4>Branża:</h4>
@@ -208,7 +208,7 @@
 									<span class="offer__average">Średnia ocena: 4</span>
 								</div>
 							</header>
-							<h2 class="offer__profession">PROGRAMISTA</h2>
+							<h2 class="offer__profession">Programista</h2>
 							<ul class="offer__list">
 								<li class="offer__info">
 									<h4>Branża:</h4>
@@ -242,12 +242,13 @@
 							</div>
 						</div>
 					</li>
-				</div>
-			</ul>
+				</ul>
+			</div>
 			<ul>
 				<li><button class="slider__arrow slider__arrow--prev"></button> </li>
 				<li><button class="slider__arrow slider__arrow--next"></button> </li>
 			</ul>
+
 		</section>
 	</main>
 	<footer class="footer">
@@ -271,13 +272,95 @@
 			</div>
 		</div>
 	</footer>
-	<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/vendor/retina.min.js"></script>
-	<script type="text/javascript" src="js/vendor/slick.min.js"></script>
+
+	<div class="modals">
+		<!--Login Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Logowanie</h2>
+					</div>
+					<form method="GET" action="/">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="loginEmail">Email</label>
+								<input id="loginEmail" type="email" name="email" class="form-control" required>
+								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+							</div>
+							<div class="form-group">
+								<label for="loginPassword">Hasło</label>
+								<input id="loginPassword" type="password" name="password" class="form-control" required >
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-primary btn-block">Zaloguj</button>
+							<span class="modal-spacer">lub</span>
+							<button type="button" class="btn btn-primary btn-block">Zaloguj się przez Facebook</button>
+							<button type="button" class="btn btn-primary btn-block">Zaloguj się przez Linkedln</button>
+							<button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#resetPasswordModal" data-dismiss="modal">Zresetuj hasło</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Sign Up Modal -->
+		<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Załóż konto</h2>
+					</div>
+					<form method="GET" action="/">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="signUpEmail">Email</label>
+								<input id="signUpEmail" type="email" name="email" class="form-control" required>
+								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+							</div>
+							<div class="form-group">
+								<label for="signUpPassword">Hasło</label>
+								<input id="signUpPassword" type="password" name="password" class="form-control" required >
+							</div>
+							<button type="submit" class="btn btn-primary btn-lg float-right">Załóż konto</button>
+						</div>
+					</form>
+					<div class="modal-footer">
+						<p>*Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae placeat nemo excepturi officia eligendi! Fugit, illo iure eius perspiciatis quidem!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Reset password Modal -->
+		<div class="modal fade" id="resetPasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title">Zresetuj hasło</h2>
+					</div>
+					<form method="GET" action="/">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="resetEmail">Email</label>
+								<input id="resetEmail" type="email" name="email" class="form-control" required>
+								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+							</div>
+							<button type="submit" class="btn btn-primary btn-lg float-right">Zresetuj hasło</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script src="js/vendor/retina.min.js"></script>
+	<script src="js/vendor/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<!-- <script src="flat/flayup.js"></script> -->
 </body>
 </html>
