@@ -4,7 +4,7 @@
 
 .offer {
 	background-color: $color--white;
-	max-width: 532px;
+	width: 532px;
 	margin: 0 auto;
 	border-radius: 10px;
 	overflow: hidden;
@@ -26,10 +26,13 @@
 		padding-top: 6px;
 	}
 	&__star {
-		content: url(../svg/ico-star-active.svg);
+		content: url(../svg/ico-star.svg);
 		width: 25px;
 		height: 25px;
 		margin-right: 12px;
+		&--active {
+			content: url(../svg/ico-star-active.svg);
+		}
 	}
 	&__average {
 		font-size: 12px;
