@@ -1,0 +1,29 @@
+// ---------------------------------------------------
+// footer
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 12px;
+	color: $color--white;
+	letter-spacing: -0.5px;
+	&__row {
+		margin: 0 -30px;
+		align-items: center;
+	}
+
+	&__list {
+		display: flex;
+    justify-content: flex-end;
+	}
+	&__link {
+		margin-left: 22px;
+		font-size: 14px;
+		letter-spacing: 0;
+		&:hover {
+			color: $color--gray;
+			text-decoration: none;
+		}
+	}
+}

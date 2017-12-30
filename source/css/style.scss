@@ -12,8 +12,12 @@
 @import 'helpers/colors';
 @import 'helpers/general';
 @import 'helpers/typography';
+@import 'helpers/bootstrapCustom';
 
 /* -- Vendors -- */
 
 /* -- Elements -- */
 @import 'components/header';
+@import 'components/sections';
+@import 'components/search';
+@import 'components/footer';

@@ -1,5 +1,32 @@
 // ---------------------------------------------------
 // header
-h1{
-	color: red;
+
+.header {
+	background-color: $color--marine-blue;
+	height: 50px;
+}
+
+.nav {
+	padding-top: 17px;
+	margin: 0 -15px;
+	&-item {
+
+	}
+	&-link {
+		padding: 0;
+		margin-left: 25px;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $color--white;
+		&:hover {
+			color: darken($color--white,9)
+		}
+
+		&--green{
+			color: $color--green;
+			&:hover {
+				color: lighten($color--green, 9);
+			}
+		}
+	}
 }

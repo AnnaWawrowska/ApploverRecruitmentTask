@@ -1,0 +1,28 @@
+// ---------------------------------------------------
+// Bootsrap overrides
+// ---------------------------------------------------
+
+.btn {
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  font-family: 'Lato', sans-serif; 
+  &-primary {
+    background-color: $color--green;
+    border-color: $color--green;
+
+    &:hover {
+      background-color: darken($color--green, 4);
+      border-color: darken($color--green, 4);
+    }
+  }
+  &-secondary {
+    background-color: $color--gray;
+    border-color: $color--gray;
+    &:hover {
+      background-color: darken($color--gray, 4);
+      border-color: darken($color--gray, 4);
+    }
+  }
+}
