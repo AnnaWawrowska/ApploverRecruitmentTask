@@ -82,6 +82,15 @@ em {
   font-weight: 700;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 h2 {
   font-size: 20px;
   font-weight: bold;
@@ -147,6 +156,95 @@ p {
 .btn-small {
   width: 49%;
   margin-top: 10px;
+}
+
+.btn-lg {
+  padding: 5px 30px;
+  margin: 15px 0;
+}
+
+.btn-block + .btn-block {
+  margin-top: 10px;
+}
+
+.modal-dialog {
+  width: 450px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #6d9f03;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-transform: uppercase;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 13px;
+}
+
+.modal-title {
+  font-size: 16px;
+}
+
+.modal-body {
+  padding: 10px 49px;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0 75px 30px;
+  border: none;
+}
+
+.modal-spacer {
+  position: relative;
+}
+
+.modal-spacer:before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: -20px;
+  width: 15px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.modal-spacer:after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: -20px;
+  width: 15px;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.modal .form-group {
+  margin-bottom: 0px;
+}
+
+.modal .form-group label {
+  font-size: 12px;
+  font-weight: 300;
+  color: #4a4a4a;
+  margin-bottom: 3px;
+}
+
+.modal .form-control {
+  border-radius: 10px;
+  background-color: #f2f0f0;
+  border: none;
+  padding-bottom: 3px;
+}
+
+.modal .form-control:focus {
+  border: none;
+  box-shadow: 0 0 0 0.2rem rgba(109, 159, 3, 0.25);
 }
 
 .slick-slide {
