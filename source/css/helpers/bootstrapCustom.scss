@@ -7,7 +7,7 @@
   cursor: pointer;
   font-size: 14px;
   letter-spacing: -0.4px;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
   &-primary {
     background-color: $color--green;
     border-color: $color--green;
@@ -20,9 +20,15 @@
   &-secondary {
     background-color: $color--gray;
     border-color: $color--gray;
+    color: $color--white;
     &:hover {
-      background-color: darken($color--gray, 4);
-      border-color: darken($color--gray, 4);
+      background-color: darken($color--gray, 7);
+      border-color: darken($color--gray, 7);
+      color: $color--white;
     }
+  }
+  &-small {
+    width: 49%;
+    margin-top: 10px;
   }
 }

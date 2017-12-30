@@ -15,9 +15,11 @@
 @import 'helpers/bootstrapCustom';
 
 /* -- Vendors -- */
+@import 'vendor/slick';
 
 /* -- Elements -- */
 @import 'components/header';
 @import 'components/sections';
 @import 'components/search';
 @import 'components/footer';
+@import 'components/offer';

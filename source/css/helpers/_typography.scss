@@ -10,32 +10,58 @@ a {
 	color: inherit;
 	text-decoration: none; }
 
-strong { font-weight: 500; }
+	strong { font-weight: 500; }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	font-weight: 400;
- }
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+	}
 
-p { margin: 5px 0; }
+	p { margin: 5px 0; }
 
-em {
-	font-style: normal;
-	font-weight: 700; }
+	em {
+		font-style: normal;
+		font-weight: 700;
+	}
 
-// ---------------------------------------------------
-// Custom typography classes
-// ---------------------------------------------------
+	// ---------------------------------------------------
+	// Custom typography classes
+	// ---------------------------------------------------
 
-h2 {
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 24px;
+		color: $color--white;
+	}
 
-}
+	h3 {
+		font-size: 16px;
+		font-weight: bold;
+		color: $color--dark-gray;
+		margin: 10px 0;
+	}
 
-h3 {
+	h4 {
+		font-size: 14px;
+		font-weight: bold;
+		color: $color--dark-gray;
+	}
 
-}
 
-h4 {
+	p {
+		font-size: 12px;
+		font-weight: 300;
+		color: $color--dark-gray;
+		line-height: 16px;
+		
+	}
 
+
+.text {
+	&--green {
+		color: $color--green;
+	}
 }
