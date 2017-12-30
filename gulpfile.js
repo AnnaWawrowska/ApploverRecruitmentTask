@@ -50,7 +50,7 @@ gulp.task('images', function(){
 })
 
 gulp.task('copy', function() {
-  return gulp.src(['source/css/**/*.css', 'source/img/*', 'source/js/**/*', 'source/fonts/*'], {
+  return gulp.src(['source/css/**/*.css', 'source/img/*','source/svg/*', 'source/js/**/*', 'source/fonts/*'], {
     base: 'source'
   })
   .pipe(gulp.dest('public_html/'))

@@ -50,6 +50,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  min-height: 100vh;
 }
 
 body {
@@ -81,6 +82,38 @@ em {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #4a4a4a;
+  line-height: 16px;
+}
+
+.text--green {
+  color: #6d9f03;
+}
+
 .btn {
   border-radius: 20px;
   cursor: pointer;
@@ -102,14 +135,122 @@ em {
 .btn-secondary {
   background-color: #d6d6d6;
   border-color: #d6d6d6;
+  color: #ffffff;
 }
 
 .btn-secondary:hover {
-  background-color: #cccccc;
-  border-color: #cccccc;
+  background-color: #c4c4c4;
+  border-color: #c4c4c4;
+  color: #ffffff;
+}
+
+.btn-small {
+  width: 49%;
+  margin-top: 10px;
 }
 
 /* -- Vendors -- */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 /* -- Elements -- */
 .header {
   background-color: rgba(0, 39, 118, 0.6);
@@ -246,4 +387,80 @@ em {
 .footer__link:hover {
   color: #d6d6d6;
   text-decoration: none;
+}
+
+.offer {
+  background-color: #ffffff;
+  max-width: 532px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.22);
+  padding-bottom: 20px;
+}
+
+.offer__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.offer__image {
+  max-width: 150px;
+}
+
+.offer__content {
+  padding: 2px 25px 0 24px;
+}
+
+.offer__ratings {
+  padding-top: 6px;
+}
+
+.offer__star {
+  content: url(../svg/ico-star-active.svg);
+  width: 25px;
+  height: 25px;
+  margin-right: 12px;
+}
+
+.offer__average {
+  font-size: 12px;
+}
+
+.offer__profession {
+  background-color: #6d9f03;
+  padding: 13px 0;
+  text-align: center;
+}
+
+.offer__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  padding: 17px 10px 3px;
+}
+
+.offer__info {
+  width: 33%;
+  padding-top: 15px;
+}
+
+.offer__buttons {
+  padding: 0 60px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
