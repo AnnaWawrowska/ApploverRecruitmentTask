@@ -1,0 +1,33 @@
+// ---------------------------------------------------
+// Slider
+// ---------------------------------------------------
+
+.slider {
+  &__arrow {
+    width: 69px;
+    height: 69px;
+    background-color: transparent;
+    background-size: contain;
+    position: absolute;
+    top: 43%;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0;
+    transition: box-shadow 0.3s ease;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      box-shadow: 0 2px 30px 0 rgba(0,0,0,0.6);
+    }
+    &--prev {
+      background-image: url(../svg/ico-arrow-left.svg);
+      left: 7%
+    }
+    &--next {
+      background-image: url(../svg/ico-arrow-right.svg);
+      right: 7%;
+    }
+  }
+}

@@ -13,6 +13,7 @@
 @import 'helpers/general';
 @import 'helpers/typography';
 @import 'helpers/bootstrapCustom';
+@import 'helpers/slickCustom';
 
 /* -- Vendors -- */
 @import 'vendor/slick';
@@ -23,3 +24,4 @@
 @import 'components/search';
 @import 'components/footer';
 @import 'components/offer';
+@import 'components/slider';
