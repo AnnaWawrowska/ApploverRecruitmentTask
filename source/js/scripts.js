@@ -39,27 +39,35 @@
         })
       },
       register: function(email, password) {
-        console.log(email);
-        console.log(password);
-        $.ajax({
-          url: 'https://foodsi-stage.applover.pl/api/v1/auth',
-          type: 'POST',
-          dataType: 'json',
-          data: {
-            "email": email,
-            "password": password
-          },
-          success: function(data) {
-            console.log('success');
-            console.log(data);
-          },
-          error: function(param1, param2, param3) {
-            console.log('error');
-            console.log('param 1:', param1);
-            console.log('param 2:', param2);
-            console.log('param 3:', param3);
-          }
+        var data = {
+          email: email,
+          password: password
+        };
+        axios.post('https://foodsi-stage.applover.pl/api/v1/auth', data)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
         });
+        // $.ajax({
+        //   url: 'https://foodsi-stage.applover.pl/api/v1/auth',
+        //   type: 'POST',
+        //   crossDomain: true,
+        //   dataType: 'json',
+        //   headers: { 'Acces-Control-Allow-Origin': '*'},
+        //   data: JSON.stringify(data),
+        //   done: function(data) {
+        //     console.log('success');
+        //     console.log(data);
+        //   },
+        //   fail: function(param1, param2, param3) {
+        //     console.log('error');
+        //     console.log('param 1:', param1);
+        //     console.log('param 2:', param2);
+        //     console.log('param 3:', param3.Message);
+        //   }
+        // });
       },
 
     }
