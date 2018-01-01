@@ -8,19 +8,37 @@
 	font-size: 12px;
 	color: $color--white;
 	letter-spacing: -0.5px;
+	@include media('<md') {
+	  position: relative;
+		text-align: center;
+		margin-bottom: 10px;
+	}
 	&__row {
 		margin: 0 -30px;
 		align-items: center;
+		@include media('<md') {
+		  margin: 0 0;
+		}
+		@include media('<sm') {
+			 flex-direction: column-reverse;
+		}
 	}
 
 	&__list {
 		display: flex;
     justify-content: flex-end;
+		@include media('<sm') {
+		  justify-content: center;
+			margin: 15px 0;
+		}
 	}
 	&__link {
 		margin-left: 22px;
 		font-size: 14px;
 		letter-spacing: 0;
+		@include media('<sm') {
+		  margin: 0 10px;
+		}
 		&:hover {
 			color: $color--gray;
 			text-decoration: none;

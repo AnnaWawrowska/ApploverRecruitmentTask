@@ -9,6 +9,9 @@
 .nav {
 	padding-top: 17px;
 	margin: 0 -15px;
+	@include media('<md') {
+	  margin: 0;
+	}
 
 	&-link {
 		padding: 0;

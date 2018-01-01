@@ -18,6 +18,9 @@
     position: absolute;
     top: 7px;
     left: 25px;
+    @include media('<sm') {
+      left: 10px;
+    }
   }
 
   &__input {
@@ -28,11 +31,18 @@
     font-family: 'Lato', sans-serif;
     padding: 0 20px 0 70px;
     outline: none;
+    @include media('<sm') {
+      width: calc(100% - 65px);
+      padding: 0 5px 0 35px;
+    }
   }
   &__submit {
     width: 150px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    @include media('<sm') {
+      width: 65px;
+    }
   }
 }
 

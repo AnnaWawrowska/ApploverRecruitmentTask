@@ -5,21 +5,41 @@
 .offer {
 	background-color: $color--white;
 	width: 532px;
-	margin: 0 auto;
+	margin: 20px auto 50px;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 2px 30px 0 rgba(0,0,0,0.22);
 	padding-bottom: 20px;
+	@include media('<lg') {
+		box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.22);
+	}
+	@include media('<md') {
+		width: 100%;
+	}
+
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		padding-bottom: 16px;
+		@include media('<sm') {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 	&__image {
 		max-width: 150px;
+		@include media('<sm') {
+			margin: 0 auto;
+			border-radius: 10px;
+			padding-top: 5px;
+		}
 	}
 	&__content {
 		padding: 2px 25px 0 24px;
+		@include media('<md') {
+			padding: 0 10px 0 10px;
+		}
 	}
 
 	&__ratings {
@@ -30,6 +50,10 @@
 		width: 25px;
 		height: 25px;
 		margin-right: 12px;
+		@include media('<md') {
+			width: 20px;
+			height: 20px;
+		}
 		&--active {
 			content: url(../svg/ico-star-active.svg);
 		}
@@ -53,6 +77,10 @@
 	&__info {
 		width: 33%;
 		padding-top: 15px;
+		@include media('<sm') {
+			width: 50%;
+			padding-top: 5px;
+		}
 	}
 	&__buttons {
 		padding: 0 60px;
@@ -60,5 +88,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@include media('<sm') {
+			padding: 0 30px;
+		}
 	}
 }

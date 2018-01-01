@@ -31,13 +31,13 @@
 /// @example scss - Creates a single breakpoint with the label `phone`
 ///  $breakpoints: ('phone': 320px);
 ///
-$breakpoints: (
-  'phone': 320px,
-  'tablet': 768px,
-  'desktop': 1024px
-) !default;
+// $breakpoints: (
+//   'phone': 320px,
+//   'tablet': 768px,
+//   'desktop': 1024px
+// ) !default;
 
-
+$breakpoints: (xs:320px, sm: 520px, md: 768px, lg: 1024px, xl: 1200px);
 ///
 /// Creates a list of static expressions or media types
 ///

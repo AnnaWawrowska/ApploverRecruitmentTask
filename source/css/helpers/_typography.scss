@@ -50,6 +50,9 @@ a {
 		font-weight: bold;
 		color: $color--dark-gray;
 		margin: 10px 0;
+		@include media('<md') {
+		  margin-bottom: 5px;
+		}
 	}
 
 	h4 {
