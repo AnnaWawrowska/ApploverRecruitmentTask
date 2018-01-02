@@ -285,7 +285,6 @@
 							<div class="form-group">
 								<label for="loginEmail">Email</label>
 								<input id="loginEmail" type="email" name="email" class="form-control" required>
-								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 							</div>
 							<div class="form-group">
 								<label for="loginPassword">Hasło</label>
@@ -316,12 +315,11 @@
 						<div class="modal-body">
 							<div class="form-group">
 								<label for="signUpEmail">Email</label>
-								<input id="signUpEmail" type="email" name="email" class="form-control">
-								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+								<input id="signUpEmail" type="email" name="email" class="form-control" required>
 							</div>
 							<div class="form-group">
 								<label for="signUpPassword">Hasło</label>
-								<input id="signUpPassword" type="password" name="password" class="form-control"  >
+								<input id="signUpPassword" type="password" name="password" class="form-control" required>
 							</div>
 							<button type="submit" class="btn btn-primary btn-lg float-right">Załóż konto</button>
 						</div>
@@ -345,7 +343,6 @@
 							<div class="form-group">
 								<label for="resetEmail">Email</label>
 								<input id="resetEmail" type="email" name="email" class="form-control" required>
-								<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 							</div>
 							<button type="submit" class="btn btn-primary btn-lg float-right">Zresetuj hasło</button>
 						</div>
@@ -361,7 +358,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 	<script src="js/vendor/retina.min.js"></script>
 	<script src="js/vendor/slick.min.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
